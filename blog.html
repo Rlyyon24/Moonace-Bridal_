@@ -1,0 +1,351 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Moonace</title> 
+<link rel="icon" type="image/png" href="https://static.thenounproject.com/png/227328-200.png"> 
+<link rel="" href="style.css"> 
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style> 
+        body { 
+            font-family: 'Playfair Display', serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff8dc; 
+            color: #000000; 
+        } 
+ 
+        header { 
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 15px 20px; 
+            text-align: center; 
+        } 
+ 
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            border-bottom: 1px solid #000000; 
+        } 
+ 
+        nav a { 
+            color: #000000; 
+            text-decoration: none; 
+            padding: 14px 20px; 
+            display: block; 
+            font-weight: bold; 
+        } 
+ 
+        nav a:hover { 
+            color: #ffffff; 
+            background-color: #000000; 
+        } 
+ 
+        .hero { 
+            background-image: url('couple.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 100px 20px; 
+        } 
+ 
+        .hero h1 { 
+            margin: 0; 
+            font-size: 3rem; 
+            text-transform: uppercase; 
+        } 
+ 
+        .hero p { 
+            font-size: 1.2rem; 
+            font-style: italic; 
+        } 
+ 
+        .container { 
+            padding: 10px; 
+        } 
+ 
+        .section { 
+            margin-bottom: 40px; 
+        } 
+ 
+        .section h2 { 
+           padding: 20px; 
+          transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      } 
+ 
+        .section:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+     } 
+ 
+        footer { 
+            background-color: #000000; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 10px 0; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+ 
+        footer a { 
+            color: #ffffff; 
+            text-decoration: none; 
+        } 
+ 
+        footer a:hover { 
+            text-decoration: underline; 
+        } 
+
+        /* Make the image fully responsive */
+      .carousel-inner img {
+       width: 85%;
+       height: 100%;
+       }
+
+        /* Feature Images - Hover Effect */
+     .feature-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+       }
+
+
+.feature-img:hover {
+      transform: scale(1.1); /* Zoom effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+<center>
+      .blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+</center>
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.blog-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.blog-card .author {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.blog-card button:hover {
+  background-color: #0056b3;
+}
+.read-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.read-btn:hover {
+  background-color: #0056b3;
+     
+   }
+
+ .hero {
+            position: relative;
+            background-image: url('cutesy.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 100px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        .hero:hover::before {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+
+        .hero:hover h1 {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        .hero:hover p {
+            transform: translateY(10px);
+            opacity: 1;
+        }
+
+       </style> 
+     </head> 
+<body> 
+     <header> 
+        <h1>MOONACE BRIDAL</h1> 
+        <p>Your guide to timeless elegance and beauty</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="home.html">Home</a> 
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a> 
+        <a href="contact.html">Contact</a> 
+       <a href="Gallery.html">Gallery</a>
+    </nav> 
+<div class="hero">
+        <div class="hero-content">
+            <h1>OUR BLOG</h1>
+            <p>“A hundred hearts would be too few to carry all my love for you.</p>
+        </div>
+    </div>
+<br>
+ <center>
+<div class="blog-container">
+<div class="blog-card">
+      <img src="P1.jpg" alt="Bridal Fashion Showcase">
+      <h3>Unveiling Elegance: A Celebration of Bridal Fashion</h3>
+      <span>Posted on October 14,2024</span>
+      <p>Weddings celebrate love, commitment, and elegance, and nothing embodies this more than the perfect bridal gown. At the recent <strong>"Destination I Do"</strong> wedding workshop hosted by MOONACE BRIDAL, brides-to-be were treated to a breathtaking display of bridal couture.</p>
+      <p class="author">by <a href="https://www.instagram.com/sapphire.hung?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Sapphire Hung</a></p>
+<a href="https://www.instagram.com/reel/DDzVIjFvkbC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">𝐃𝐞𝐬𝐢𝐠𝐧𝐞𝐫 𝐆𝐨𝐰𝐧 𝐑𝐞𝐧𝐭𝐚𝐥 | 𝐌𝐚𝐝𝐞 𝐓𝐨 𝐎𝐫𝐝𝐞𝐫 | 𝐏𝐫𝐞 𝐖𝐞𝐝𝐝𝐢𝐧𝐠 | 𝐀𝐜𝐭𝐮𝐚𝐥 𝐃𝐚𝐲 𝐖𝐞𝐝𝐝𝐢𝐧𝐠</a>
+      </div>
+    </div>
+</center>
+
+<br>
+<div class="blog-container">
+    <div class="blog-card">
+      <img src="P2.png" alt="Teal Floral Bridal Gown">
+      <h3>Enchanting Elegance: A Floral Masterpiece in Teal</h3>
+      <span>Posted on November,28 2024</span>
+      <p>When it comes to capturing the magic of weddings, nothing compares to the blend of artistry and elegance. Embroidered with delicate floral details.</p>
+      <p class="author">by <a href="https://www.instagram.com/rradenrania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">RradenRania</a></p>
+   <a href="https://www.instagram.com/reel/DDdw0oAPQM8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">𝐓𝐡𝐞 𝐅𝐢𝐫𝐬𝐭 𝐂𝐨𝐯𝐞 𝟓𝟓 𝐖𝐞𝐝𝐝𝐢𝐧𝐠 𝐰𝐨𝐫𝐤𝐬𝐡𝐨𝐩</a>
+
+    </div>
+    </div>
+
+<br>
+
+    <div class="blog-card">
+      <img src="P3.jpg" alt="𝘼𝙡𝙬𝙖𝙮𝙨 𝙖𝙣𝙙 𝙁𝙤𝙧𝙚𝙫𝙚𝙧">
+      <h3>𝙍𝙚𝙙 𝙏𝙝𝙧𝙚𝙖𝙙 𝙤𝙛 𝙁𝙖𝙩𝙚</h3>
+     <span>Posted on February,13 2023</span>
+      <p>The Beauty of Nature as Witness; the island setting of Bako National park, with its beaches of fine sand and dramatic granite rocks, paints a spectacular backdrop for our proposal.</p>
+      <p class="author">by <a href="">uknown</a></p>
+      <a href="https://www.instagram.com/reel/CrxBfFVgnv0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">The Best Wedding Dresses for Every Bridal Moment</a>
+
+
+    </div>
+    </div>
+ </body>
+</html>
+<br>
+ 
+    <footer> 
+        <p>&copy; 2025 Moonace Bridal. Disclaimer: This website is produced to fully the IMD318 Group Assignment requirements. <a href="">Privacy Policy</a></p> 
+    </footer> 
+</div>
+</div>
+<br>
+</body> 
+</html>

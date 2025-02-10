@@ -1,0 +1,336 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Moonace</title> 
+<link rel="icon" type="image/png" href="https://static.thenounproject.com/png/227328-200.png"> 
+<link rel="" href="style.css"> 
+    <style> 
+        body { 
+          font-family: 'Playfair Display', serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff8dc; 
+            color: #000000; 
+        } 
+ 
+        header { 
+         background: linear-gradient(to right, #333333, #000000); 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 20px 0; 
+    
+        } 
+ 
+        nav { 
+        display: flex; 
+        justify-content: space-between; /* Align items on the left and right */ 
+        align-items: center; /* Vertically center items */ 
+        background-color: #ffffff; 
+        border-bottom: 6px solid #000000; 
+        padding: 0 20px; /* Add padding for spacing */ 
+    } 
+ 
+    nav a { 
+        color: #000000; 
+        text-decoration: none; 
+        padding: 14px 20px; 
+        display: block; 
+        font-weight: bold; 
+    } 
+ 
+    nav a:hover { 
+        color: #ffffff; 
+        background-color: #000000; 
+    } 
+ 
+.mp3-player { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-left: auto; /* Push the player to the right */ 
+} 
+ 
+#playlist { 
+    border: 1px solid #000000; 
+    padding: 5px; 
+    font-size: 14px; 
+    border-radius: 4px; 
+} 
+ 
+audio { 
+    height: 30px; 
+    vertical-align: middle; 
+} 
+     .hero { 
+    position: relative; 
+          background-size: cover;  
+            background-position: center;  
+            color: #ffffff;  
+            text-align: center;  
+            padding: 10px 20px;  
+   width: 100%; 
+    height: 95vh; /* Full viewport height */ 
+    overflow: hidden; /* Hide the overflow to keep the images within bounds */ 
+ 
+} 
+ 
+        .slideshow { 
+            display: flex; 
+            width: 400%; /* 4 images, adjust accordingly */ 
+            height: 100%; 
+            transition: transform 4s ease-in-out; 
+        } 
+ 
+        .slideshow img { 
+            width: 100%; /* Each image takes full viewport width */ 
+            height: 100vh; /* Full viewport height */ 
+            object-fit: cover; 
+        }  
+.hero::before { 
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 1; 
+  transition: background-color 0.4s ease-in-out; 
+} 
+ 
+.hero:hover::before { 
+  background-color: rgba(0, 0, 0, 0.7); 
+} 
+.hero-content { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    text-align: center; 
+} 
+ 
+ 
+.hero h1{ 
+  position: relative; 
+  z-index: 2; 
+  transform: translateY(0); 
+  opacity: 1; 
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  font-size: 2.5rem; 
+  color: white; 
+  text-align: center; 
+} 
+/* Here is the change to make the text appear in center*/ 
+.hero p { 
+  position: relative; 
+  z-index: 2; 
+  transform: translateY(0); 
+  opacity: 1; 
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  font-size: 1.5rem; 
+  font-style: italic; 
+  color: white; 
+  text-align: center; 
+} 
+ 
+.hero:hover h1 { 
+  transform: translateY(-10px); 
+  opacity: 1; 
+} 
+ 
+.hero:hover p { 
+  transform: translateY(10px); 
+  opacity: 1; 
+} 
+ 
+ 
+         .container { 
+            padding: 40px 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        } 
+ 
+        .section { 
+            margin-bottom: 60px; 
+        } 
+ 
+        .section h2 { 
+            font-size: 2.2rem; 
+            color: #222; 
+            margin-bottom: 25px; 
+            text-transform: uppercase; 
+            letter-spacing: 0.3px; 
+            position: relative; 
+        } 
+ 
+        .section h2::after { 
+            content: ""; 
+            display: block; 
+            width: 60px; 
+            height: 4px; 
+            background-color:: black; 
+            margin-top: 10px; 
+        } 
+ 
+        .card { 
+            display: flex; 
+            flex-direction: column; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+            border-radius: 10px; 
+            overflow: hidden; 
+            background-color: #fff; 
+            margin: 0 auto; 
+            max-width: 500px; 
+        } 
+ 
+        .card img { 
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+        } 
+ 
+        .card-content { 
+            padding: 20px; 
+        } 
+ 
+        .card-content h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 10px; 
+            color: #333; 
+        } 
+ 
+        .card-content p { 
+            font-size: 1rem; 
+            color: #555; 
+        } 
+ 
+      
+        footer { 
+            background-color: #000000; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 10px 0; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+ 
+        footer a { 
+            color: #ffffff; 
+            text-decoration: none; 
+        } 
+ 
+        footer a:hover { 
+            text-decoration: underline; 
+        } 
+
+    </style> 
+</head> 
+<body> 
+    <header> 
+ 
+        <div style="max-width: 1200px; margin: 0 auto;"> 
+        <h1 style="font-size: 2.0rem; margin: 0; font-weight: bold;">Moonace Bridal</h1> 
+        <p style="font-style: italic; font-size: 1.1rem; margin: 10px 0;">Under the stars and moon, your beauty will always shine brightest</p> 
+    </div> 
+    </header> 
+ 
+    <nav> 
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a> 
+        <a href="blog.html">Blog</a> 
+        <a href="contact.html">Contact</a> 
+        <a href="Gallery.html">Gallery</a>
+
+         <div class="mp3-player"> 
+        <audio id="audio-player" controls> 
+            <source src="wedding-172018 (1).mp3" type="audio/mpeg"> 
+             <source src="wedding-piano-167467.mp3" type="audio/mpeg"> 
+             <source src="Lana Del Rey - Sweet (Audio).mp3" type="audio/mpeg"> 
+            Your browser does not support the audio element. 
+        </audio> 
+        <select id="playlist"> 
+            <option value="wedding-172018 (1).mp3">Song 1</option> 
+            <option value="wedding-piano-167467.mp3">Song 2</option> 
+            <option value="Lana Del Rey - Sweet (Audio).mp3">Song 3</option> 
+        </select> 
+    </div> 
+    </nav> 
+ 
+    <div class="hero"> 
+        <div class="slideshow"> 
+            <img src="pink wedding.jpg" alt="Image 1"> 
+            <img src="wedding pic.jpg" alt="Image 2"> 
+            <img src="image3.jpg" alt="Image 3"> 
+            <img src="kissu.jpg" alt="Image 4"> 
+        </div> 
+            <div class ="hero-content"> 
+        <h1>DISCOVER YOUR INNER CLASS & ELEGANCE</h1> 
+        <p>"Bringing your bridal dreams to life, one exquisite detail at a time."</p> 
+    </div> 
+</div> 
+ 
+        <div class="container"> 
+        <div class="section" id="blog"> 
+    <h2>Latest Articles</h2> 
+    <div class="card"> 
+        <a href="https://www.instagram.com/reel/DEUWnL7P8dV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"> 
+            <img src="https://cdn.pixabay.com/photo/2016/08/05/06/18/bride-1571673_1280.jpg" alt="Article"> 
+          
+        </a> 
+        <div class="card-content"> 
+            <h3>𝐌𝐨𝐨𝐧𝐚𝐜𝐞 𝐁𝐫𝐢𝐝𝐚𝐥 𝐱 𝐓𝐡𝐞 𝐒𝐡𝐨𝐭𝐬 𝐆𝐚𝐥𝐥𝐞𝐫𝐲 𝐱 𝐌𝐨𝐭𝐢𝐨𝐧 𝐅𝐨𝐮𝐧𝐝𝐫𝐲</h3> 
+            <p>Discover timeless beauty tips and upcoming trends for an unforgettable bridal experience.</p> 
+        </div> 
+    </div> 
+    <br> 
+    <div class="card-container"> 
+        <div class="card"> 
+            <a href="https://www.instagram.com/reel/DBFsWvvvoJU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank"> 
+                <video controls width="100%">
+            <source src="VIDEO1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+            </a> 
+            <div class="card-content"> 
+                <h3>𝐓𝐡𝐞 𝐎𝐧𝐞 𝐚𝐧𝐝 𝐓𝐡𝐞 𝐎𝐧𝐥𝐲 𝐄𝐚𝐬𝐭 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚 𝐀𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐑𝐞𝐭𝐚𝐢𝐥𝐞𝐫</h3> 
+                <p>Coming in next achievement "𝐓𝐡𝐞 𝐎𝐧𝐞 𝐚𝐧𝐝 𝐓𝐡𝐞 𝐎𝐧𝐥𝐲 𝐄𝐚𝐬𝐭 𝐌𝐚𝐥𝐚𝐲𝐬𝐢𝐚 𝐀𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐑𝐞𝐭𝐚𝐢𝐥𝐞𝐫" of the new exclusive designer brand @giovanna_alessandro @giovanna_luxury </p> 
+            </div> 
+        </div> 
+    </div> 
+</div> 
+ 
+ 
+<script> 
+         const slides = document.querySelector('.hero .slideshow'); // Target the slideshow container
+    const images = ['pink wedding.jpg', 'wedding pic.jpg', 'image3.jpg', 'kissu.jpg']; // Add your image paths here
+    let currentIndex = 0;
+
+    function slideImages() {
+        currentIndex = (currentIndex + 1) % images.length; // Increment index and loop back to start
+        slides.style.transform = `translateX(-${currentIndex * 100}vw)`; // Slide to the left
+    }
+
+    setInterval(slideImages, 4000); // Change image every 4 seconds
+</script> 
+<script> 
+    const audioPlayer = document.getElementById('audio-player'); 
+    const playlist = document.getElementById('playlist'); 
+ 
+    playlist.addEventListener('change', function () { 
+        audioPlayer.src = this.value; 
+        audioPlayer.play(); 
+    }); 
+</script> 
+    </script> 
+<footer> 
+        <p>&copy; 2025 Moonace Bridal. Disclaimer: This website is produced to fully the IMD318 Group Assignment requirements. <a href="">Privacy Policy</a></p> 
+    </footer> 
+</div>
+</div>
+
+</body> 
+</html>

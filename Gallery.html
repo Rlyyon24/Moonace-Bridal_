@@ -1,0 +1,437 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Moonace</title> 
+<link rel="icon" type="image/png" href="https://static.thenounproject.com/png/227328-200.png"> 
+<link rel="" href="style.css"> 
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style> 
+        body { 
+            font-family: 'Playfair Display', serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fff8dc; 
+            color: #000000; 
+        } 
+ 
+        header { 
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 15px 20px; 
+            text-align: center; 
+        } 
+ 
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            border-bottom: 1px solid #000000; 
+        } 
+ 
+        nav a { 
+            color: #000000; 
+            text-decoration: none; 
+            padding: 14px 20px; 
+            display: block; 
+            font-weight: bold; 
+        } 
+ 
+        nav a:hover { 
+            color: #ffffff; 
+            background-color: #000000; 
+        } 
+ 
+        .hero { 
+            background-image: url('couple.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 100px 20px; 
+        } 
+ 
+        .hero h1 { 
+            margin: 0; 
+            font-size: 3rem; 
+            text-transform: uppercase; 
+        } 
+ 
+        .hero p { 
+            font-size: 1.2rem; 
+            font-style: italic; 
+        } 
+ 
+        .container { 
+            padding: 10px; 
+        } 
+ 
+        .section { 
+            margin-bottom: 40px; 
+        } 
+ 
+        .section h2 { 
+           padding: 20px; 
+          transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      } 
+ 
+        .section:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+     } 
+ 
+        footer { 
+            background-color: #000000; 
+            color: #ffffff; 
+            text-align: center; 
+            padding: 10px 0; 
+            position: relative; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+ 
+        footer a { 
+            color: #ffffff; 
+            text-decoration: none; 
+        } 
+ 
+        footer a:hover { 
+            text-decoration: underline; 
+        } 
+
+        /* Make the image fully responsive */
+      .carousel-inner img {
+       width: 85%;
+       height: 100%;
+       }
+
+        /* Feature Images - Hover Effect */
+     .feature-img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+       }
+
+
+.feature-img:hover {
+      transform: scale(1.1); /* Zoom effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+<center>
+      .blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+</center>
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.blog-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.blog-card .author {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.blog-card button:hover {
+  background-color: #0056b3;
+}
+.read-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.read-btn:hover {
+  background-color: #0056b3;
+     
+   }
+
+ .hero {
+            position: relative;
+            background-image: url('PC.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 100px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        .hero:hover::before {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 2;
+            transform: translateY(0);
+            opacity: 1;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+
+        .hero:hover h1 {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        .hero:hover p {
+            transform: translateY(10px);
+            opacity: 1;
+        }
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width; 1500px;
+    margin: auto;
+  }
+
+  .gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-container img:hover {
+    transform: scale(1.05);
+  }
+
+/* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+       </style> 
+     </head> 
+<body> 
+     <header> 
+        <h1>MOONACE BRIDAL</h1> 
+        <p>Your guide to timeless elegance and beauty</p> 
+    </header> 
+ 
+    <nav> 
+        <a href="home.html">Home</a> 
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a> 
+        <a href="contact.html">Contact</a> 
+       <a href="gallery.html">Gallery</a>
+    </nav> 
+<div class="hero">
+        <div class="hero-content">
+            <h1>GALLERY</h1>
+            <p>“A pieces of our heart"</p>
+        </div>
+    </div>
+<br>
+
+
+
+<center>
+<div class="gallery-container">
+  <img src="G1.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+  <img src="G2.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+  <img src="G3.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+  <img src="G4.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+  <img src="G5.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G6.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G7.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G8.jpg" alt="Gown Fitting " onclick="openModal(this.src)">
+<img src="G9.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G10.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G11.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G13.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G14.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G15.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G16.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G17.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G18.jpg" alt="Gown Fitting"onclick="openModal(this.src)">
+<img src="G19.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G20.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G21.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G22.jpg" alt="Gown Fitting"onclick="openModal(this.src)">
+<img src="G23.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G24.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G25.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G26.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G27.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G28.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G29.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G30.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G31.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G32.jpg" alt="Gown Fitting " onclick="openModal(this.src)">
+<img src="G34.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G35.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G36.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G37.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G38.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G39.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G40.jpg" alt="Gown Fitting " onclick="openModal(this.src)">
+<img src="G41.jpg" alt="Gown Fitting " onclick="openModal(this.src)">
+<img src="G42.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G43.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G44.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G45.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G46.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G48.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G49.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G50.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+<img src="G51.jpg" alt="Gown Fitting" onclick="openModal(this.src)">
+</center>
+</div>
+</div>
+</div>
+
+<!-- Modal for Zoom Effect -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img id="modalImg" class="modal-content">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("modalImg").src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+</script>
+
+ <br>
+<br>    
+<footer> 
+        <p>&copy; 2025 Moonace Bridal. Disclaimer: This website is produced to fully the IMD318 Group Assignment requirements. <a href="">Privacy Policy</a></p> 
+    </footer> 
+</div>
+</div>
+<br>
+</body> 
+</html>
